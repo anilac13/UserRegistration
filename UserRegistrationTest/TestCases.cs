@@ -37,7 +37,7 @@ namespace UserRegistrationTest
         [TestMethod]
         public void GivenPassword_WhenAnalyed_ShouldReturn_Valid()
         {
-            string password = "adhfjdkj";
+            string password = "Adhfjdkj";
             string result = validate.ValidatePassword(password);
             Assert.AreEqual(result, "Valid");
         }
