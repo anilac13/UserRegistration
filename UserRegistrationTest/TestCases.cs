@@ -20,5 +20,12 @@ namespace UserRegistrationTest
             string result = validate.ValidateLastName(lastName);
             Assert.AreEqual(result, "Valid");
         }
+        [TestMethod]
+        public void GivenEmail_WhenAnalyed_ShouldReturn_Valid()
+        {
+            string email = "abc@yahoo.com";
+            string result = validate.ValidateEmail(email);
+            Assert.AreEqual(result, "Valid");
+        }
     }
 }
