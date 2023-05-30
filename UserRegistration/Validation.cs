@@ -7,7 +7,7 @@ namespace UserRegistration
         public const string NAME = @"^[A-Z][a-z]{2,}$";
         public const string EMAIL = @"^[a-zA-z0-9.+-]+[@][a-zA-z0-9]+[.][a-zA-z0-9.]{2,}$";
         public const string NUMBER = @"^[0-9 ]+[6-9][0-9]{9}$";
-        public const string PASSWORD = @"^[A-Z]{1,}[a-z]{7,}$";
+        public const string PASSWORD = @"^[A-Z]{1,}[a-z0-9]{5,}$";
         public string ValidateFirstName(string firstName)
         {
             Regex regex = new Regex(NAME);
