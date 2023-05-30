@@ -41,5 +41,11 @@ namespace UserRegistrationTest
             string result = validate.ValidatePassword(password);
             Assert.AreEqual(result, "Valid");
         }
+        [TestMethod]
+        public void GivenMails_WhenAnalyed_ShouldReturn_Valid()
+        {
+            string result = validate.ValidateAllMails();
+            Assert.AreEqual(result, "Valid");
+        }
     }
 }
