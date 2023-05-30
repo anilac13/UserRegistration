@@ -12,5 +12,12 @@ namespace UserRegistration
                 return "Valid";
             return "Invalid";
         }
+        public string ValidateLastName(string lastName)
+        {
+            Regex regex = new Regex(NAME);
+            if (regex.IsMatch(lastName))
+                return "Valid";
+            return "Invalid";
+        }
     }
 }
