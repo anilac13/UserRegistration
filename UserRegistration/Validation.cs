@@ -6,6 +6,7 @@ namespace UserRegistration
     {
         public const string NAME = @"^[A-Z][a-z]{2,}$";
         public const string EMAIL = @"^[a-zA-z0-9.+-]+[@][a-zA-z0-9]+[.][a-zA-z0-9.]{2,}$";
+        public const string NUMBER = @"^[0-9 ]+[6-9][0-9]{9}$";
         public string ValidateFirstName(string firstName)
         {
             Regex regex = new Regex(NAME);
@@ -24,6 +25,13 @@ namespace UserRegistration
         {
             Regex regex = new Regex(EMAIL);
             if (regex.IsMatch(email))
+                return "Valid";
+            return "Invalid";
+        }
+        public string ValidatePhoneNumber(string number)
+        {
+            Regex regex = new Regex(NUMBER);
+            if (regex.IsMatch(number))
                 return "Valid";
             return "Invalid";
         }

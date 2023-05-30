@@ -27,5 +27,12 @@ namespace UserRegistrationTest
             string result = validate.ValidateEmail(email);
             Assert.AreEqual(result, "Valid");
         }
+        [TestMethod]
+        public void GivenPhoneNumber_WhenAnalyed_ShouldReturn_Valid()
+        {
+            string number = "91 7890654321";
+            string result = validate.ValidatePhoneNumber(number);
+            Assert.AreEqual(result, "Valid");
+        }
     }
 }
